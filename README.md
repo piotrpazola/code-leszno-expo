@@ -3,6 +3,7 @@ https://github.com/FormidableLabs/spectacle/blob/HEAD/docs/tutorial.md
 https://www.npmjs.com/package/spectacle
 https://formidable.com/open-source/spectacle/docs/getting-started/
 
+https://github.com/FormidableLabs/spectacle
 
 ##
 
