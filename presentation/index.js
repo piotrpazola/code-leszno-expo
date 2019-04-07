@@ -1,7 +1,4 @@
-// Import React
 import React from 'react';
-
-// Import Spectacle Core tags
 import {
   CodePane,
   BlockQuote,
@@ -16,8 +13,7 @@ import {
   Slide,
   Text
 } from 'spectacle';
-
-// Import theme
+import Terminal from "spectacle-terminal";
 import createTheme from 'spectacle/lib/themes/default';
 
 const images = {
@@ -39,13 +35,9 @@ const code = {
   code0303: require('raw-loader!../assets/code/listing0303.code'),
 }
 
-// Require CSS
-require('normalize.css');
-
 const theme = createTheme(
   {
     primary: 'white',
-    /* ustawic te kolory zgodnie z kolorami webtrip */
     secondary: '#1F2022',
     tertiary: '#ed1941',
     quaternary: '#ed1941',
@@ -87,9 +79,121 @@ export default class Presentation extends React.Component {
           </div>
         </Slide>
 
-        <Slide transition={['fade']} bgColor="secondary">
+        <Slide bgColor="primary">
           <div style={{position: 'absolute',top: '5%',left: '5%'}}>
-            <Heading size={5} textColor="primary">Mięsisty kod na początek</Heading>
+            <Heading size={5} textColor="secondary">
+              Wymagania: Node.js
+            </Heading>
+          </div>
+          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
+            <Image src={images.logoWebtripCzarne} />
+          </div>
+          <div style={{marginTop: '65px'}}>
+            <List>
+              <ListItem>tu dac chyba skrina z node.js...</ListItem>
+              <ListItem>i podpisac przez Cite link....</ListItem>
+            </List>
+          </div>
+        </Slide>
+
+        <Slide transition={['fade']} bgColor="primary">
+          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
+            <Heading size={5} textColor="secondary">
+              Instalacja: Expo
+            </Heading>
+          </div>
+          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
+            <Image src={images.logoWebtripCzarne} />
+          </div>
+          <div style={{marginTop: '65px'}}>
+            <Terminal title="Terminal" output={[
+              "# npm install expo-cli --global",
+              <div>
+                <div style={{marginTop: '30px',marginBottom: '30px'}}><i>(...)</i></div>
+                <div>+ expo-cli@2.14.0</div>
+                <div>added 596 packages from 434 contributors, removed 3 packages,</div>
+                <div>updated 28 packages and moved 4 packages in 1031.079s</div>
+              </div>,
+            ]}
+            />
+          </div>
+        </Slide>
+
+        <Slide transition={['fade']} bgColor="primary">
+          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
+            <Heading size={5} textColor="secondary">
+              Inicjalizacja nowego projektu Expo
+            </Heading>
+          </div>
+          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
+            <Image src={images.logoWebtripCzarne} />
+          </div>
+          <div style={{marginTop: '65px'}}>
+            <Terminal title="Terminal" output={[
+              "# expo init moja-pierwsza-apka",
+              <div style={{marginTop: '30px'}}>
+                <div><span style={{color: '#008000'}}>?</span> Choose a template:</div>
+                <div>  ----- Managed workflow -----</div>
+                <div style={{color: '#00ffff'}}>> blank         minimal dependencies to run and an empty root component</div>
+                <div>  tabs          several example screens and tabs using react-navigation</div>
+                <div>  ----- Bare workflow -----</div>
+                <div>  bare-minimum  minimal setup for using unimodules</div>
+              </div>,
+            ]}
+            />
+          </div>
+        </Slide>
+
+        <Slide transition={['fade']} bgColor="primary">
+          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
+            <Heading size={5} textColor="secondary">
+              Inicjalizacja nowego projektu Expo
+            </Heading>
+          </div>
+          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
+            <Image src={images.logoWebtripCzarne} />
+          </div>
+          <div style={{marginTop: '65px'}}>
+            <Terminal title="Terminal" output={[
+              <div>
+                <div><span style={{color: '#008000'}}>?</span> Choose a template: <span style={{color: '#00ffff'}}>expo-template-blank</span></div>
+                <div><span style={{color: '#00ffff'}}>?</span> Please enter a few initial configuration values.</div>
+                <div>  Read more: https://docs.expo.io/versions/latest/workflow/configuration/ » <span style={{color: '#808000'}}>50% completed</span></div>
+                <div> &#123;</div>
+                <div>   "expo": &#123;</div>
+                <div>     "name": "<span style={{color: '#00ffff'}}>&lt;The name of your app visible on the home screen&gt;</span>",</div>
+                <div>     "slug": "moja-pierwsza-apka"</div>
+                <div>   &#125;</div>
+                <div> &#125;</div>
+              </div>,
+            ]}
+            />
+          </div>
+        </Slide>
+
+        <Slide transition={['fade']} bgColor="primary">
+          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
+            <Heading size={5} textColor="secondary">
+              Uruchamianie projektu Expo
+            </Heading>
+          </div>
+          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
+            <Image src={images.logoWebtripCzarne} />
+          </div>
+          <div style={{marginTop: '65px'}}>
+            <Terminal title="Terminal" output={[
+              "# cd moja-pierwsza-apka",
+              "# expo start",
+            ]}
+            />
+          </div>
+        </Slide>
+
+
+
+        <Slide bgColor="secondary">
+          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
+            <Heading size={5} textColor="primary">Case study: Czytnik kodów kreskowych</Heading>
           </div>
           <div style={{position: 'absolute',top: '5%',right: '5%'}}>
             <Image src={images.logoWebtripBiale} />
@@ -99,9 +203,9 @@ export default class Presentation extends React.Component {
           </div>
         </Slide>
 
-        <Slide style={{marginTop: '65px'}} transition={['fade']} bgColor="secondary">
+        <Slide transition={['fade']} bgColor="secondary">
           <div style={{position: 'absolute',top: '5%',left: '5%'}}>
-            <Heading size={5} textColor="primary">Mięsisty kod na początek</Heading>
+            <Heading size={5} textColor="primary">Case study: Czytnik kodów kreskowych</Heading>
           </div>
           <div style={{position: 'absolute',top: '5%',right: '5%'}}>
             <Image src={images.logoWebtripBiale} />
@@ -111,10 +215,10 @@ export default class Presentation extends React.Component {
           </div>
         </Slide>
 
-        <Slide style={{marginTop: '65px'}} transition={['fade']} bgColor="secondary">
+        <Slide transition={['fade']} bgColor="secondary">
           <div style={{position: 'absolute',top: '5%',left: '5%'}}>
             <Heading size={5} textColor="primary">
-              Mięsisty kod na początek
+              Case study: Czytnik kodów kreskowych
             </Heading>
           </div>
           <div style={{position: 'absolute',top: '5%',right: '5%'}}>
@@ -128,7 +232,7 @@ export default class Presentation extends React.Component {
         <Slide transition={['fade']} bgColor="secondary">
           <div style={{position: 'absolute',top: '5%',left: '5%'}}>
             <Heading size={5} textColor="primary">
-              Komponent Expo: Skaner kodów kreskowych
+              Case study: Czytnik kodów kreskowych
             </Heading>
           </div>
           <div style={{position: 'absolute',top: '5%',right: '5%'}}>
@@ -347,7 +451,7 @@ export default class Presentation extends React.Component {
             <BlockQuote>
               <Quote fit textColor="secondary" style={{borderLeft: '1px solid #ed1941'}}>The fastest way to build an app.
 With Expo tools, services, and React Native, you can build, deploy, and quickly iterate on native iOS and Android apps from the same JavaScript codebase.</Quote>
-              <Cite margin="10px 0 0 30px">Expo.io</Cite>
+              <Cite style={{fontSize: '70px'}} margin="10px 0 0 30px">Expo.io</Cite>
             </BlockQuote>
           </div>
         </Slide>
@@ -677,6 +781,25 @@ With Expo tools, services, and React Native, you can build, deploy, and quickly 
             <Text margin="10px 0 0" textColor="tertiary" fit bold>
                 „tracimy sporo czasu na konfigurowanie gradli” - jak mówił Espeo, szybko to doświadczyłem, gdy cały dzień zajmowałem się konfigurowaniem kompilacji javy dla Androida
             </Text>
+          </div>
+        </Slide>
+
+        <Slide bgColor="primary">
+          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
+            <Heading size={5} textColor="secondary">
+              Snack.expo.io
+            </Heading>
+          </div>
+          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
+            <Image src={images.logoWebtripCzarne} />
+          </div>
+          <div style={{marginTop: '65px'}}>
+            <BlockQuote>
+              <Quote fit textColor="secondary" style={{borderLeft: '1px solid #ed1941'}}>
+                Fall in Love. See how quickly you can turn your ideas into performant cross-platform apps before installing a thing.
+              </Quote>
+              <Cite style={{fontSize: '70px'}} margin="10px 0 0 30px">snack.expo.io</Cite>
+            </BlockQuote>
           </div>
         </Slide>
 

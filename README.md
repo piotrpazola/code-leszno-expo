@@ -1,3 +1,6 @@
+## TODO
+zmienic url repo origin
+
 ## Tutorial
 https://github.com/FormidableLabs/spectacle/blob/HEAD/docs/tutorial.md
 https://www.npmjs.com/package/spectacle
