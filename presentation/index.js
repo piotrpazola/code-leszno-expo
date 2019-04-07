@@ -21,7 +21,15 @@ const images = {
   logoWebtripCzarne: require('../assets/webtrip-logo-czarne.png'),
   fejs: require('../assets/fejs.jpg'),
   mapaJs: require('../assets/mapa-js.png'),
+  nodejsEventloop: require('../assets/node-event-loop.png'),
 };
+
+const screens = {
+  expo01: require('../assets/screens/expo01.jpg'),
+  expo02: require('../assets/screens/expo02.jpg'),
+  nodejs: require('../assets/screens/nodejs.jpg'),
+  filesExpo: require('../assets/screens/filesExpo.jpg'),
+}
 
 const code = {
   code0101: require('raw-loader!../assets/code/listing0101.code'),
@@ -33,6 +41,7 @@ const code = {
   code0301: require('raw-loader!../assets/code/listing0301.code'),
   code0302: require('raw-loader!../assets/code/listing0302.code'),
   code0303: require('raw-loader!../assets/code/listing0303.code'),
+  code0401: require('raw-loader!../assets/code/listing0401.code'),
 }
 
 const theme = createTheme(
@@ -89,17 +98,86 @@ export default class Presentation extends React.Component {
             <Image src={images.logoWebtripCzarne} />
           </div>
           <div style={{marginTop: '65px'}}>
-            <List>
-              <ListItem>tu dac chyba skrina z node.js...</ListItem>
-              <ListItem>i podpisac przez Cite link....</ListItem>
-            </List>
+            <BlockQuote>
+              <Quote fit textColor="secondary" style={{borderLeft: '1px solid #ed1941'}}>
+                Node.js is an event-driven server-side javascript I/O framework. Good at handling lots of different I/O connections at the same time.
+              </Quote>
+              <Cite style={{fontSize: '50px'}} margin="10px 0 0 30px">Introduction to Node.js, Prof. Christian Maderazo, James Santos</Cite>
+            </BlockQuote>
+          </div>
+        </Slide>
+
+        <Slide bgColor="primary">
+          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
+            <Heading size={5} textColor="secondary">
+              Wymagania: Node.js
+            </Heading>
+          </div>
+          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
+            <Image src={images.logoWebtripCzarne} />
+          </div>
+          <div style={{marginTop: '65px'}}>
+            <Image src={images.nodejsEventloop} style={{height: '650px'}} />
+          </div>
+        </Slide>
+
+        <Slide bgColor="primary">
+          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
+            <Heading size={5} textColor="secondary">
+              Wymagania: Node.js
+            </Heading>
+          </div>
+          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
+            <Image src={images.logoWebtripCzarne} />
+          </div>
+          <div style={{marginTop: '65px'}}>
+            <BlockQuote>
+              <Quote fit textColor="secondary" style={{borderLeft: '1px solid #ed1941'}}>
+                NODE IS<br />
+                A tool for creating I/O based programs that need to be fast and/or handle lots of connections
+              </Quote>
+              <Cite style={{fontSize: '50px'}} margin="10px 0 0 30px">Introduction to Node.js, Prof. Christian Maderazo, James Santos</Cite>
+            </BlockQuote>
+          </div>
+        </Slide>
+
+        <Slide bgColor="primary">
+          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
+            <Heading size={5} textColor="secondary">
+              Wymagania: Node.js
+            </Heading>
+          </div>
+          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
+            <Image src={images.logoWebtripCzarne} />
+          </div>
+          <div style={{marginTop: '65px'}}>
+            <BlockQuote>
+              <Quote fit textColor="secondary" style={{borderLeft: '1px solid #ed1941', fontSize: '65px'}}>
+                We do about 40% of annual revenues on Black Friday. 55% came on mobile... that 55% percent of traffic went 100% through Node. We were able to deliver this massive traffic with the equivalent of two CPUs and 30 GB of RAM.
+              </Quote>
+              <Cite style={{fontSize: '50px'}} margin="10px 0 0 30px">Eran Hammer, Senior Architect, Walmart Labs</Cite>
+            </BlockQuote>
+          </div>
+        </Slide>
+
+        <Slide bgColor="primary">
+          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
+            <Heading size={5} textColor="secondary">
+              Wymagania: Node.js
+            </Heading>
+          </div>
+          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
+            <Image src={images.logoWebtripCzarne} />
+          </div>
+          <div style={{marginTop: '65px'}}>
+            <Image src={screens.nodejs} fit />
           </div>
         </Slide>
 
         <Slide transition={['fade']} bgColor="primary">
           <div style={{position: 'absolute',top: '5%',left: '5%'}}>
             <Heading size={5} textColor="secondary">
-              Instalacja: Expo
+              Instalacja Expo
             </Heading>
           </div>
           <div style={{position: 'absolute',top: '5%',right: '5%'}}>
@@ -155,10 +233,11 @@ export default class Presentation extends React.Component {
           </div>
           <div style={{marginTop: '65px'}}>
             <Terminal title="Terminal" output={[
+              <div><span style={{color: '#008000'}}>?</span> Choose a template: <span style={{color: '#00ffff'}}>expo-template-blank</span></div>,
               <div>
-                <div><span style={{color: '#008000'}}>?</span> Choose a template: <span style={{color: '#00ffff'}}>expo-template-blank</span></div>
                 <div><span style={{color: '#00ffff'}}>?</span> Please enter a few initial configuration values.</div>
-                <div>  Read more: https://docs.expo.io/versions/latest/workflow/configuration/ » <span style={{color: '#808000'}}>50% completed</span></div>
+                <div>  Read more: https://docs.expo.io/versions/latest/workflow/configuration/</div>
+                <div>  » <span style={{color: '#808000'}}>50% completed</span></div>
                 <div> &#123;</div>
                 <div>   "expo": &#123;</div>
                 <div>     "name": "<span style={{color: '#00ffff'}}>&lt;The name of your app visible on the home screen&gt;</span>",</div>
@@ -174,7 +253,7 @@ export default class Presentation extends React.Component {
         <Slide transition={['fade']} bgColor="primary">
           <div style={{position: 'absolute',top: '5%',left: '5%'}}>
             <Heading size={5} textColor="secondary">
-              Uruchamianie projektu Expo
+              Inicjalizacja nowego projektu Expo
             </Heading>
           </div>
           <div style={{position: 'absolute',top: '5%',right: '5%'}}>
@@ -182,7 +261,91 @@ export default class Presentation extends React.Component {
           </div>
           <div style={{marginTop: '65px'}}>
             <Terminal title="Terminal" output={[
-              "# cd moja-pierwsza-apka",
+              <div>
+                <div><span style={{color: '#008000'}}>?</span> Choose a template: <span style={{color: '#00ffff'}}>expo-template-blank</span></div>
+                <div><span style={{color: '#008000'}}>?</span> Please enter a few initial configuration values.</div>
+                <div>  Read more: https://docs.expo.io/versions/latest/workflow/configuration/</div>
+                <div>  » <span style={{color: '#800080'}}>100% completed</span></div>
+                <div><span style={{color: '#008000'}}>?</span> Yarn v1.15.2 found. Use Yarn to install dependencies? (Y/n)</div>
+              </div>,
+            ]}
+            />
+          </div>
+        </Slide>
+
+        <Slide transition={['fade']} bgColor="primary">
+          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
+            <Heading size={5} textColor="secondary">
+              Inicjalizacja nowego projektu Expo
+            </Heading>
+          </div>
+          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
+            <Image src={images.logoWebtripCzarne} />
+          </div>
+          <div style={{marginTop: '65px'}}>
+            <Terminal title="Terminal" output={[
+              <div><span style={{color: '#008000'}}>?</span> Yarn v1.15.2 found. Use Yarn to install dependencies? <span style={{color: '#00ffff'}}>Yes</span></div>,
+              <div>
+                <div>Extracting project files...</div>
+                <div>Installing dependencies...</div>
+                <div>yarn install v1.15.2</div>
+                <div><span style={{color: '#0000ff'}}>info</span> No lockfile found.</div>
+                <div>[1/4] Resolving packages...</div>
+                <div><span style={{color: '#008000'}}>?</span> react-native-vector-icons@6.0.0</div>
+              </div>,
+            ]}
+            />
+          </div>
+        </Slide>
+
+        <Slide transition={['fade']} bgColor="primary">
+          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
+            <Heading size={5} textColor="secondary">
+              Instalacja aplikacji Expo na urządzeniu
+            </Heading>
+          </div>
+          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
+            <Image src={images.logoWebtripCzarne} />
+          </div>
+          <div style={{marginTop: '65px'}}>
+            <Image src={screens.expo01} style={{width: '360px', marginRight: '100px', display: 'inline'}} />
+            <Image src={screens.expo02} style={{width: '360px', display: 'inline'}} />
+          </div>
+        </Slide>
+
+        <Slide transition={['fade']} bgColor="secondary">
+          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
+            <Heading size={5} textColor="primary">
+              Uruchamianie projektu Expo
+            </Heading>
+          </div>
+          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
+            <Image src={images.logoWebtripBiale} />
+          </div>
+          <div style={{marginTop: '65px', display: 'table'}}>
+          <div style={{display: 'table-row'}}>
+            <div style={{paddingRight: '100px', verticalAlign: 'top', display: 'table-cell'}}>
+              <Image src={screens.filesExpo} fit />
+            </div>
+            <div style={{textAlign: 'left', marginLeft: '50px', verticalAlign: 'top', display: 'table-cell'}}>
+              <div style={{color: 'white'}}>App.js</div>
+              <CodePane fit source={code.code0401} lang="js" style={{width: '100%', fontSize: '18px'}}/>
+            </div>
+          </div>
+        </div>
+        </Slide>
+
+        <Slide transition={['fade']} bgColor="secondary">
+          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
+            <Heading size={5} textColor="primary">
+              Uruchamianie projektu Expo
+            </Heading>
+          </div>
+          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
+            <Image src={images.logoWebtripBiale} />
+          </div>
+          <div style={{marginTop: '65px'}}>
+            <Terminal title="Terminal" output={[
               "# expo start",
             ]}
             />
