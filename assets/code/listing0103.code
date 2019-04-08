@@ -1,1 +1,14 @@
-tu jeszcze coś
+    return (
+      <View style={{flex:1}}>
+        <BarCodeScanner
+          onBarCodeScanned={this.handleBarCodeScanned}
+          style={{flex: 1}}
+        >
+        <Text style={{fontSize: 30, color: '#FFF', padding: 20}}>
+          Code Leszno Tech Talk #1: Skaner kodów kreskowych
+        </Text>
+      </BarCodeScanner>
+      </View>
+    );
+  }
+}

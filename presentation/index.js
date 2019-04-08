@@ -29,6 +29,15 @@ const screens = {
   expo02: require('../assets/screens/expo02.jpg'),
   nodejs: require('../assets/screens/nodejs.jpg'),
   filesExpo: require('../assets/screens/filesExpo.jpg'),
+  expoMetro01: require('../assets/screens/expoMetro01.jpg'),
+  expoMetro02: require('../assets/screens/expoMetro02.jpg'),
+  expoMetro03: require('../assets/screens/expoMetro03.jpg'),
+  expoMetro02Mobile: require('../assets/screens/expoMetro02-mobile.jpg'),
+  expoMetro03Mobile: require('../assets/screens/expoMetro03-mobile.jpg'),
+  caseDone00: require('../assets/screens/caseDone00.jpg'),
+  caseDone01: require('../assets/screens/caseDone01.jpg'),
+  caseDone02: require('../assets/screens/caseDone02.jpg'),
+  caseDone03: require('../assets/screens/caseDone03.jpg'),
 }
 
 const code = {
@@ -107,7 +116,7 @@ export default class Presentation extends React.Component {
           </div>
         </Slide>
 
-        <Slide bgColor="primary">
+        <Slide transition={['fade']} bgColor="primary">
           <div style={{position: 'absolute',top: '5%',left: '5%'}}>
             <Heading size={5} textColor="secondary">
               Wymagania: Node.js
@@ -121,7 +130,7 @@ export default class Presentation extends React.Component {
           </div>
         </Slide>
 
-        <Slide bgColor="primary">
+        <Slide transition={['fade']} bgColor="primary">
           <div style={{position: 'absolute',top: '5%',left: '5%'}}>
             <Heading size={5} textColor="secondary">
               Wymagania: Node.js
@@ -141,7 +150,7 @@ export default class Presentation extends React.Component {
           </div>
         </Slide>
 
-        <Slide bgColor="primary">
+        <Slide transition={['fade']} bgColor="primary">
           <div style={{position: 'absolute',top: '5%',left: '5%'}}>
             <Heading size={5} textColor="secondary">
               Wymagania: Node.js
@@ -160,7 +169,7 @@ export default class Presentation extends React.Component {
           </div>
         </Slide>
 
-        <Slide bgColor="primary">
+        <Slide transition={['fade']} bgColor="primary">
           <div style={{position: 'absolute',top: '5%',left: '5%'}}>
             <Heading size={5} textColor="secondary">
               Wymagania: Node.js
@@ -174,7 +183,7 @@ export default class Presentation extends React.Component {
           </div>
         </Slide>
 
-        <Slide transition={['fade']} bgColor="primary">
+        <Slide bgColor="primary">
           <div style={{position: 'absolute',top: '5%',left: '5%'}}>
             <Heading size={5} textColor="secondary">
               Instalacja Expo
@@ -347,11 +356,100 @@ export default class Presentation extends React.Component {
           <div style={{marginTop: '65px'}}>
             <Terminal title="Terminal" output={[
               "# expo start",
+              <div>Starting project at <br />prezentacja-code-leszno-expo/assets/code/moja-pierwsza-apka
+                <br />Expo DevTools is running at http://localhost:19002<br />
+              Opening DevTools in the browser... (press shift-d to disable)<br />
+            Starting Metro Bundler on port 19001.<br />
+              <br />
+                Tunnel ready.<br />
+              <br />
+                  exp://192.168.1.5:19000</div>,
+              <div>
+                <br />To run the app with live reloading, choose one of:<br />
+                 Sign in as @ppazola in Expo Client on Android or iOS.
+                 <br />Your projects will automatically appear in the
+                  "Projects" tab.
+                 <br />Scan the QR code above with the Expo app (Android) or the Camera app (iOS).
+                 <br />Press a for Android emulator.
+                 <br />Press e to send a link to your phone with email.
+              <br />
+                <br />Press ? to show a list of all available commands.
+                <br /><span style={{color: 'green'}}>Logs for your project will appear below. Press Ctrl+C to exit.</span>
+              </div>
             ]}
             />
           </div>
         </Slide>
 
+        <Slide transition={['fade']} bgColor="secondary">
+          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
+            <Heading size={5} textColor="primary">
+              Uruchamianie projektu Expo
+            </Heading>
+          </div>
+          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
+            <Image src={images.logoWebtripBiale} />
+          </div>
+          <div style={{marginTop: '65px'}}>
+            <Image src={screens.expoMetro01} fit />
+          </div>
+        </Slide>
+
+        <Slide transition={['fade']} bgColor="secondary">
+          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
+            <Heading size={5} textColor="primary">
+              Uruchamianie projektu Expo
+            </Heading>
+          </div>
+          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
+            <Image src={images.logoWebtripBiale} />
+          </div>
+          <div style={{marginTop: '65px', display: 'table'}}>
+            <div style={{display: 'table-row'}}>
+              <div style={{paddingRight: '300px', verticalAlign: 'top', display: 'table-cell'}}>
+                <Image src={screens.expoMetro02} fit />
+              </div>
+              <div style={{textAlign: 'left', marginLeft: '50px', verticalAlign: 'top', display: 'table-cell'}}>
+                <Image src={screens.expoMetro02Mobile} fit />
+              </div>
+            </div>
+          </div>
+        </Slide>
+
+        <Slide transition={['fade']} bgColor="secondary">
+          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
+            <Heading size={5} textColor="primary">
+              Uruchamianie projektu Expo
+            </Heading>
+          </div>
+          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
+            <Image src={images.logoWebtripBiale} />
+          </div>
+          <div style={{marginTop: '45px'}}>
+            <CodePane fit source={code.code0401} lang="js" style={{fontSize: '22px'}}/>
+          </div>
+        </Slide>
+
+        <Slide transition={['fade']} bgColor="secondary">
+          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
+            <Heading size={5} textColor="primary">
+              Uruchamianie projektu Expo
+            </Heading>
+          </div>
+          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
+            <Image src={images.logoWebtripBiale} />
+          </div>
+          <div style={{marginTop: '65px', display: 'table'}}>
+            <div style={{display: 'table-row'}}>
+              <div style={{paddingRight: '200px', verticalAlign: 'top', display: 'table-cell'}}>
+                <Image src={screens.expoMetro03} fit />
+              </div>
+              <div style={{textAlign: 'left', marginLeft: '50px', verticalAlign: 'top', display: 'table-cell'}}>
+                <Image src={screens.expoMetro03Mobile} fit />
+              </div>
+            </div>
+          </div>
+        </Slide>
 
 
         <Slide bgColor="secondary">
@@ -402,9 +500,23 @@ export default class Presentation extends React.Component {
             <Image src={images.logoWebtripBiale} />
           </div>
           <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-                tu efekty - z 2 skriny obok siebie z telefonu jak to dziala
-            </Text>
+            <Image src={screens.caseDone00} style={{marginRight: '100px', display: 'inline'}} />
+            <Image src={screens.caseDone01} style={{display: 'inline'}} />
+          </div>
+        </Slide>
+
+        <Slide transition={['fade']} bgColor="secondary">
+          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
+            <Heading size={5} textColor="primary">
+              Case study: Czytnik kodów kreskowych
+            </Heading>
+          </div>
+          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
+            <Image src={images.logoWebtripBiale} />
+          </div>
+          <div style={{marginTop: '65px'}}>
+            <Image src={screens.caseDone02} style={{marginRight: '100px', display: 'inline'}} />
+            <Image src={screens.caseDone03} style={{display: 'inline'}} />
           </div>
         </Slide>
 
@@ -420,7 +532,7 @@ export default class Presentation extends React.Component {
           <div style={{marginTop: '65px'}}>
             <BlockQuote>
               <Quote fit textColor="secondary" style={{borderLeft: '1px solid #ed1941', fontSize: '65px'}}>
-               3rd quarter of 2018: Android users were able to choose between 2.1 million apps. Apple's App Store remained the second-largest app store with almost 2 million available apps.
+               3rd quarter of 2018: Android users were able to choose between 2.1 million apps. App Store remained the second-largest app store with almost 2 million available apps.
               </Quote>
               <Cite style={{fontSize: '50px'}} margin="10px 0 0 30px">statista.com</Cite>
             </BlockQuote>
