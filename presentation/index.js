@@ -411,32 +411,38 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary">
           <div style={{position: 'absolute',top: '5%',left: '5%'}}>
             <Heading size={5} textColor="secondary">
-              Po co nam natywne aplikacje?
+              Aplikacje mobilne
             </Heading>
           </div>
           <div style={{position: 'absolute',top: '5%',right: '5%'}}>
             <Image src={images.logoWebtripCzarne} />
           </div>
           <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-                Ująć jakieś statystyki?
-            </Text>
+            <BlockQuote>
+              <Quote fit textColor="secondary" style={{borderLeft: '1px solid #ed1941', fontSize: '65px'}}>
+               3rd quarter of 2018: Android users were able to choose between 2.1 million apps. Apple's App Store remained the second-largest app store with almost 2 million available apps.
+              </Quote>
+              <Cite style={{fontSize: '50px'}} margin="10px 0 0 30px">statista.com</Cite>
+            </BlockQuote>
           </div>
         </Slide>
 
         <Slide transition={['fade']} bgColor="primary">
           <div style={{position: 'absolute',top: '5%',left: '5%'}}>
             <Heading size={5} textColor="secondary">
-              Po co nam natywne aplikacje?
+              Aplikacje mobilne
             </Heading>
           </div>
           <div style={{position: 'absolute',top: '5%',right: '5%'}}>
             <Image src={images.logoWebtripCzarne} />
           </div>
           <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-                PWA - ograniczenia? (brak niektorych API?)
-            </Text>
+          <BlockQuote>
+            <Quote fit textColor="secondary" style={{borderLeft: '1px solid #ed1941', fontSize: '65px'}}>
+              tu jeszcze jeden cytat
+            </Quote>
+            <Cite style={{fontSize: '50px'}} margin="10px 0 0 30px">statista.com</Cite>
+          </BlockQuote>
           </div>
         </Slide>
 
