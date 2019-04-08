@@ -51,6 +51,12 @@ const code = {
   code0302: require('raw-loader!../assets/code/listing0302.code'),
   code0303: require('raw-loader!../assets/code/listing0303.code'),
   code0401: require('raw-loader!../assets/code/listing0401.code'),
+  code0501: require('raw-loader!../assets/code/listing0501.code'),
+  code0502: require('raw-loader!../assets/code/listing0502.code'),
+  code0503: require('raw-loader!../assets/code/listing0503.code'),
+  code0601: require('raw-loader!../assets/code/listing0601.code'),
+  code0602: require('raw-loader!../assets/code/listing0602.code'),
+  code0603: require('raw-loader!../assets/code/listing0603.code'),
 }
 
 const theme = createTheme(
@@ -793,7 +799,7 @@ With Expo tools, services, and React Native, you can build, deploy, and quickly 
             <Image src={images.logoWebtripBiale} />
           </div>
           <div style={{marginTop: '65px'}}>
-            <CodePane fit source={code.code0201} lang="js" style={{fontSize: '28px'}}/>
+            <CodePane fit source={code.code0501} lang="js" style={{fontSize: '28px'}}/>
           </div>
         </Slide>
 
@@ -805,7 +811,7 @@ With Expo tools, services, and React Native, you can build, deploy, and quickly 
             <Image src={images.logoWebtripBiale} />
           </div>
           <div style={{marginTop: '65px'}}>
-            <CodePane fit source={code.code0202} lang="js" style={{fontSize: '28px'}}/>
+            <CodePane fit source={code.code0502} lang="js" style={{fontSize: '28px'}}/>
           </div>
         </Slide>
 
@@ -817,7 +823,7 @@ With Expo tools, services, and React Native, you can build, deploy, and quickly 
             <Image src={images.logoWebtripBiale} />
           </div>
           <div style={{marginTop: '65px'}}>
-            <CodePane fit source={code.code0203} lang="js" style={{fontSize: '28px'}}/>
+            <CodePane fit source={code.code0503} lang="js" style={{fontSize: '28px'}}/>
           </div>
         </Slide>
 
@@ -885,7 +891,7 @@ With Expo tools, services, and React Native, you can build, deploy, and quickly 
             <Image src={images.logoWebtripBiale} />
           </div>
           <div style={{marginTop: '65px'}}>
-            <CodePane fit source={code.code0301} lang="js" style={{fontSize: '28px'}}/>
+            <CodePane fit source={code.code0601} lang="js" style={{fontSize: '28px'}}/>
           </div>
         </Slide>
 
@@ -897,7 +903,7 @@ With Expo tools, services, and React Native, you can build, deploy, and quickly 
             <Image src={images.logoWebtripBiale} />
           </div>
           <div style={{marginTop: '65px'}}>
-            <CodePane fit source={code.code0302} lang="js" style={{fontSize: '28px'}}/>
+            <CodePane fit source={code.code0602} lang="js" style={{fontSize: '28px'}}/>
           </div>
         </Slide>
 
@@ -909,7 +915,7 @@ With Expo tools, services, and React Native, you can build, deploy, and quickly 
             <Image src={images.logoWebtripBiale} />
           </div>
           <div style={{marginTop: '65px'}}>
-            <CodePane fit source={code.code0303} lang="js" style={{fontSize: '28px'}}/>
+            <CodePane fit source={code.code0603} lang="js" style={{fontSize: '28px'}}/>
           </div>
         </Slide>
 

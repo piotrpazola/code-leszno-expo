@@ -1,0 +1,15 @@
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.title}>Code Leszno Tech Talk #1: GPS na mapie</Text>
+          {!this.state.location && <Text style={styles.waiting}>Szukam pozycji GPS...</Text>}
+          {this.state.location && <MapView
+              style={{flex: 1, width: 400, height: 400}}
+              initialRegion={this.state.location}
+            >
+              <MapView.Marker coordinate={this.state.location} />
+            </MapView>}
+      </View>
+    );
+  }
+}

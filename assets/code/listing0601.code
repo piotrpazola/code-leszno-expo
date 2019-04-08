@@ -1,0 +1,14 @@
+  import { Audio, KeepAwake } from 'expo';
+
+(...)
+
+    const { sound: soundObject, status } = await Audio.Sound.createAsync(
+      { uri: STREAMING_URL },
+      { shouldPlay: true },
+      this._onPlaybackStatusUpdate
+    );
+    this.audioPlayer=soundObject;
+    this.setState({
+      isPlaying: 1,
+      showTitle: 1
+    });

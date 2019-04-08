@@ -1,0 +1,8 @@
+  async getLocationAsync() {
+    const { status, permissions } = await Permissions.askAsync(Permissions.LOCATION);
+    if (status === 'granted') {
+      return Location.getCurrentPositionAsync({enableHighAccuracy: true});
+    } else {
+      throw new Error('Location permission not granted');
+    }
+  }

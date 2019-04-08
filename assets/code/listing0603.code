@@ -1,0 +1,15 @@
+  render() {
+      return (
+        <View style={styles.container}>
+          <KeepAwake />
+          <View style={styles.logoContainer}>
+            <Image
+              style={styles.logo}
+              resizeMode="contain"
+              source={require('./assets/logo.png')}
+            />
+          </View>
+          <View style={styles.playingTitleContainer}>
+            <Text style={[styles.playingTitle,{opacity: (this.state.showTitle ? 1 : 0)}]}>{this.state.playingTitle}</Text>
+          </View>
+(...)

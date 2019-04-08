@@ -1,0 +1,12 @@
+_runFetchMetaData = async () => {
+  try {
+    let response = await fetch(
+      STREAMING_URL_METADATA,
+    );
+    let responseJson = await response.json();
+    this.setState({playingTitle: `Gramy:\n${responseJson.icestats.source.title}`});
+    setTimeout(this._runStaticMetaData, 15000);
+  } catch (error) {
+    console.error(error);
+  }
+}

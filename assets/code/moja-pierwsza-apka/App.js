@@ -1,40 +1,48 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { BarCodeScanner, Permissions } from 'expo';
+import { MapView, Location, Permissions } from 'expo';
 
 export default class App extends React.Component {
   state = {
-   hasCameraPermission: null,
- }
-
- async componentDidMount() {
-  const { status } = await Permissions.askAsync(Permissions.CAMERA);
-  this.setState({ hasCameraPermission: status === 'granted' });
+    location: null
   }
 
-  handleBarCodeScanned = ({ type, data }) => {
-    alert(`Kod kreskowy typu ${type} zawierający dane ${data} został zeskanowany!`);
+ async componentDidMount() {
+   const {coords} = await this.getLocationAsync();
+   const location = {
+      longitude: coords.longitude,
+      latitude: coords.latitude,
+      latitudeDelta: 0.05,
+      longitudeDelta: 0.05
+   }
+   this.setState({ location });
+ }
+
+  async getLocationAsync() {
+    const { status, permissions } = await Permissions.askAsync(Permissions.LOCATION);
+    if (status === 'granted') {
+      alert(status);
+      return Location.getCurrentPositionAsync({enableHighAccuracy: true});
+    } else {
+      throw new Error('Location permission not granted');
+    }
   }
 
   render() {
-    const { hasCameraPermission } = this.state;
-
-    if (hasCameraPermission === null) {
-      return <Text>Requesting for camera permission</Text>;
-    }
-    if (hasCameraPermission === false) {
-      return <Text>No access to camera</Text>;
-    }
     return (
-      <View style={{flex:1}}>
-        <BarCodeScanner
-          onBarCodeScanned={this.handleBarCodeScanned}
-          style={{flex: 1}}
-        >
-        <Text style={{fontSize: 30, color: '#FFF', padding: 20}}>
-          Code Leszno Tech Talk #1: Skaner kodów kreskowych
-        </Text>
-      </BarCodeScanner>
+      <View style={styles.container}>
+        <Text style={styles.title}>Code Leszno Tech Talk #1: GPS na mapie</Text>
+          {!this.state.location &&
+            <Text style={styles.waiting}>Szukam pozycji GPS...</Text>
+          }
+          {this.state.location &&
+            <MapView
+              style={{ flex: 1, width: 400, height: 400 }}
+              initialRegion={this.state.location}
+            >
+              <MapView.Marker coordinate={this.state.location} />
+            </MapView>
+          }
       </View>
     );
   }
@@ -45,6 +53,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
+  },
+  title: {
+    fontSize: 20,
+    paddingTop: 10
   },
 });
