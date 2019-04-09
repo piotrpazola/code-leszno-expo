@@ -22,6 +22,12 @@ const images = {
   fejs: require('../assets/fejs.jpg'),
   mapaJs: require('../assets/mapa-js.png'),
   nodejsEventloop: require('../assets/node-event-loop.png'),
+  appDevTime: require('../assets/appDevTime.jpg'),
+  expoZiomek: require('../assets/ziomek-expo.png'),
+  hybridApp01: require('../assets/hybridApp01.png'),
+  hybridApp02: require('../assets/hybridApp02.png'),
+  androidVsIos: require('../assets/android-vs-apple.gif'),
+  expoWorkflows: require('../assets/expo-lifecycle-workflows.png'),
 };
 
 const screens = {
@@ -38,6 +44,8 @@ const screens = {
   caseDone01: require('../assets/screens/caseDone01.jpg'),
   caseDone02: require('../assets/screens/caseDone02.jpg'),
   caseDone03: require('../assets/screens/caseDone03.jpg'),
+  case02Done01: require('../assets/screens/case02Done01.jpg'),
+  case02Done02: require('../assets/screens/case02Done02.jpg'),
 }
 
 const code = {
@@ -114,44 +122,11 @@ export default class Presentation extends React.Component {
           </div>
           <div style={{marginTop: '65px'}}>
             <BlockQuote>
-              <Quote fit textColor="secondary" style={{borderLeft: '1px solid #ed1941'}}>
-                Node.js is an event-driven server-side javascript I/O framework. Good at handling lots of different I/O connections at the same time.
-              </Quote>
-              <Cite style={{fontSize: '50px'}} margin="10px 0 0 30px">Introduction to Node.js, Prof. Christian Maderazo, James Santos</Cite>
-            </BlockQuote>
-          </div>
-        </Slide>
-
-        <Slide transition={['fade']} bgColor="primary">
-          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
-            <Heading size={5} textColor="secondary">
-              Wymagania: Node.js
-            </Heading>
-          </div>
-          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
-            <Image src={images.logoWebtripCzarne} />
-          </div>
-          <div style={{marginTop: '65px'}}>
-            <Image src={images.nodejsEventloop} style={{height: '650px'}} />
-          </div>
-        </Slide>
-
-        <Slide transition={['fade']} bgColor="primary">
-          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
-            <Heading size={5} textColor="secondary">
-              Wymagania: Node.js
-            </Heading>
-          </div>
-          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
-            <Image src={images.logoWebtripCzarne} />
-          </div>
-          <div style={{marginTop: '65px'}}>
-            <BlockQuote>
-              <Quote fit textColor="secondary" style={{borderLeft: '1px solid #ed1941'}}>
-                NODE IS<br />
+              <Quote fit textColor="secondary" style={{fontSize: '60px', borderLeft: '1px solid #ed1941'}}>
+                NODE IS<br /><br />
                 A tool for creating I/O based programs that need to be fast and/or handle lots of connections
               </Quote>
-              <Cite style={{fontSize: '50px'}} margin="10px 0 0 30px">Introduction to Node.js, Prof. Christian Maderazo, James Santos</Cite>
+              <Cite style={{fontSize: '45px'}} margin="10px 0 0 30px">Introduction to Node.js, Prof. Christian Maderazo, James Santos</Cite>
             </BlockQuote>
           </div>
         </Slide>
@@ -167,10 +142,11 @@ export default class Presentation extends React.Component {
           </div>
           <div style={{marginTop: '65px'}}>
             <BlockQuote>
-              <Quote fit textColor="secondary" style={{borderLeft: '1px solid #ed1941', fontSize: '65px'}}>
-                We do about 40% of annual revenues on Black Friday. 55% came on mobile... that 55% percent of traffic went 100% through Node. We were able to deliver this massive traffic with the equivalent of two CPUs and 30 GB of RAM.
+              <Quote fit textColor="secondary" style={{borderLeft: '1px solid #ed1941', fontSize: '60px'}}>
+                We do about 40% of annual revenues on Black Friday. 55% came on mobile... that 55% percent of traffic went 100% through Node.
+                <br /><br />We were able to deliver this massive traffic with the equivalent of two CPUs and 30 GB of RAM.
               </Quote>
-              <Cite style={{fontSize: '50px'}} margin="10px 0 0 30px">Eran Hammer, Senior Architect, Walmart Labs</Cite>
+              <Cite style={{fontSize: '45px'}} margin="10px 0 0 30px">Eran Hammer, Senior Architect, Walmart Labs</Cite>
             </BlockQuote>
           </div>
         </Slide>
@@ -536,9 +512,23 @@ export default class Presentation extends React.Component {
             <Image src={images.logoWebtripCzarne} />
           </div>
           <div style={{marginTop: '65px'}}>
+            <Image src={images.androidVsIos} fit />
+          </div>
+        </Slide>
+
+        <Slide transition={['fade']}  bgColor="primary">
+          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
+            <Heading size={5} textColor="secondary">
+              Aplikacje mobilne
+            </Heading>
+          </div>
+          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
+            <Image src={images.logoWebtripCzarne} />
+          </div>
+          <div style={{marginTop: '65px'}}>
             <BlockQuote>
               <Quote fit textColor="secondary" style={{borderLeft: '1px solid #ed1941', fontSize: '65px'}}>
-               3rd quarter of 2018: Android users were able to choose between 2.1 million apps. App Store remained the second-largest app store with almost 2 million available apps.
+               3rd quarter of 2018<br /><br />Android users were able to choose between 2.1 million apps. App Store remained the second-largest app store with almost 2 million available apps.
               </Quote>
               <Cite style={{fontSize: '50px'}} margin="10px 0 0 30px">statista.com</Cite>
             </BlockQuote>
@@ -556,10 +546,31 @@ export default class Presentation extends React.Component {
           </div>
           <div style={{marginTop: '65px'}}>
           <BlockQuote>
-            <Quote fit textColor="secondary" style={{borderLeft: '1px solid #ed1941', fontSize: '65px'}}>
-              tu jeszcze jeden cytat
+            <Quote fit textColor="secondary" style={{borderLeft: '1px solid #ed1941', fontSize: '60px'}}>
+              The more time you put in research and planning, the more time you will save later during the development process. <br />
+              <br />Typically, though, apps are being developed from scratch to the release point in about three to four months.
             </Quote>
-            <Cite style={{fontSize: '50px'}} margin="10px 0 0 30px">statista.com</Cite>
+            <Cite style={{fontSize: '50px'}} margin="10px 0 0 30px">Bartosz Bielecki, Insanelab.com</Cite>
+          </BlockQuote>
+          </div>
+        </Slide>
+
+        <Slide transition={['fade']} bgColor="primary">
+          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
+            <Heading size={5} textColor="secondary">
+              Aplikacje mobilne
+            </Heading>
+          </div>
+          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
+            <Image src={images.logoWebtripCzarne} />
+          </div>
+          <div style={{marginTop: '65px'}}>
+          <Image src={images.appDevTime} fit />
+          <BlockQuote>
+            <Quote fit textColor="secondary" style={{borderLeft: '1px solid #ed1941', fontSize: '50px'}}>
+            About 48% of mobile apps take 4 to 6 months of development time.
+            </Quote>
+            <Cite style={{fontSize: '40px'}} margin="10px 0 0 30px">MobileAppDaily.com</Cite>
           </BlockQuote>
           </div>
         </Slide>
@@ -567,67 +578,35 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary">
           <div style={{position: 'absolute',top: '5%',left: '5%'}}>
             <Heading size={5} textColor="secondary">
-              Aplikacje hybrydowe
+              Aplikacje hybrydowe vs. natywne
             </Heading>
           </div>
           <div style={{position: 'absolute',top: '5%',right: '5%'}}>
             <Image src={images.logoWebtripCzarne} />
           </div>
           <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-              - dostępne rozwiązania na rynku:
-              Cordova (np. Ionic),
-              NativeScript (np. z Vue)
-              i React Native
-            </Text>
+          <Image src={images.hybridApp01} fit />
+          <BlockQuote>
+            <Quote fit textColor="secondary" style={{borderLeft: '1px solid #ed1941', fontSize: '40px'}}>
+            Web applications can run on a mobile device and have access to the device, such as the camera or GPS features. When a hybrid app is built, it will be compiled, transforming your web application into a native app.
+            </Quote>
+            <Cite style={{fontSize: '40px'}} margin="10px 0 0 30px">TechMagic.co</Cite>
+          </BlockQuote>
           </div>
         </Slide>
 
         <Slide transition={['fade']} bgColor="primary">
           <div style={{position: 'absolute',top: '5%',left: '5%'}}>
             <Heading size={5} textColor="secondary">
-              Aplikacje hybrydowe: Cordova
+              Hybrydowe: Ionic vs. React Native
             </Heading>
           </div>
           <div style={{position: 'absolute',top: '5%',right: '5%'}}>
             <Image src={images.logoWebtripCzarne} />
           </div>
           <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-                Cordova (np. Ionic)?
-            </Text>
-          </div>
-        </Slide>
-
-        <Slide transition={['fade']} bgColor="primary">
-          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
-            <Heading size={5} textColor="secondary">
-              Aplikacje hybrydowe: NativeScript
-            </Heading>
-          </div>
-          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
-            <Image src={images.logoWebtripCzarne} />
-          </div>
-          <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-                NativeScript (np. z Vue)?
-            </Text>
-          </div>
-        </Slide>
-
-        <Slide transition={['fade']} bgColor="primary">
-          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
-            <Heading size={5} textColor="secondary">
-              Aplikacje hybrydowe: React Native
-            </Heading>
-          </div>
-          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
-            <Image src={images.logoWebtripCzarne} />
-          </div>
-          <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-              info o RN
-            </Text>
+          <Image src={images.hybridApp02} fit style={{width: '1050px'}}/>
+            <Text style={{fontSize: '20px', textAlign: 'right'}}>źródło: TechMagic.co</Text>
           </div>
         </Slide>
 
@@ -641,25 +620,14 @@ export default class Presentation extends React.Component {
             <Image src={images.logoWebtripCzarne} />
           </div>
           <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-              ogólnie skąd to się wzięło
-            </Text>
-          </div>
-        </Slide>
-
-        <Slide transition={['fade']} bgColor="primary">
-          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
-            <Heading size={5} textColor="secondary">
-              React
-            </Heading>
-          </div>
-          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
-            <Image src={images.logoWebtripCzarne} />
-          </div>
-          <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-              z czym to się je
-            </Text>
+          <BlockQuote>
+            <Quote fit textColor="secondary" style={{borderLeft: '1px solid #ed1941', fontSize: '50px'}}>
+              JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called “components”.<br />
+              <br />
+              We use components to tell React what we want to see on the screen. When our data changes, React will efficiently update and re-render our components.
+            </Quote>
+            <Cite style={{fontSize: '40px'}} margin="10px 0 0 30px">Tutorial: Intro to React, reactjs.org</Cite>
+          </BlockQuote>
           </div>
         </Slide>
 
@@ -673,25 +641,12 @@ export default class Presentation extends React.Component {
             <Image src={images.logoWebtripCzarne} />
           </div>
           <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-              ogólnie skąd to się wzięło
-            </Text>
-          </div>
-        </Slide>
-
-        <Slide transition={['fade']} bgColor="primary">
-          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
-            <Heading size={5} textColor="secondary">
-              React Native
-            </Heading>
-          </div>
-          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
-            <Image src={images.logoWebtripCzarne} />
-          </div>
-          <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-              tu już pokazać multiplatformowość
-            </Text>
+          <BlockQuote>
+            <Quote fit textColor="secondary" style={{borderLeft: '1px solid #ed1941', fontSize: '50px'}}>
+              React Native lets you build mobile apps using only JavaScript. It uses the same design as React, letting you compose a rich mobile UI using declarative components.
+            </Quote>
+            <Cite style={{fontSize: '40px'}} margin="10px 0 0 30px">Build native mobile apps using JavaScript and React, facebook.github.io/react-native/</Cite>
+          </BlockQuote>
           </div>
         </Slide>
 
@@ -719,9 +674,12 @@ export default class Presentation extends React.Component {
             <Image src={images.logoWebtripCzarne} />
           </div>
           <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-              logikę architektury
-            </Text>
+          <BlockQuote>
+            <Quote fit textColor="secondary" style={{borderLeft: '1px solid #ed1941', fontSize: '50px'}}>
+              The apps you are building with React Native aren't mobile web apps because React Native uses the same fundamental UI building blocks as regular iOS and Android apps. Instead of using Swift, Kotlin or Java, you are putting those building blocks together using JavaScript and React.
+            </Quote>
+            <Cite style={{fontSize: '40px'}} margin="10px 0 0 30px">Build native mobile apps using JavaScript and React, facebook.github.io/react-native/</Cite>
+          </BlockQuote>
           </div>
         </Slide>
 
@@ -736,9 +694,9 @@ export default class Presentation extends React.Component {
           </div>
           <div style={{marginTop: '65px'}}>
             <BlockQuote>
-              <Quote fit textColor="secondary" style={{borderLeft: '1px solid #ed1941'}}>The fastest way to build an app.
-With Expo tools, services, and React Native, you can build, deploy, and quickly iterate on native iOS and Android apps from the same JavaScript codebase.</Quote>
-              <Cite style={{fontSize: '70px'}} margin="10px 0 0 30px">Expo.io</Cite>
+              <Quote fit textColor="secondary" style={{fontSize: '60px', borderLeft: '1px solid #ed1941'}}>The fastest way to build an app.
+                With Expo tools, services, and React Native, you can build, deploy, and quickly iterate on native iOS and Android apps from the same JavaScript codebase.</Quote>
+              <Cite style={{fontSize: '55px'}} margin="10px 0 0 30px">Expo.io</Cite>
             </BlockQuote>
           </div>
         </Slide>
@@ -753,9 +711,7 @@ With Expo tools, services, and React Native, you can build, deploy, and quickly 
             <Image src={images.logoWebtripCzarne} />
           </div>
           <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-              dlaczego o nim mówimy?
-            </Text>
+            <Image src={images.expoWorkflows} fit />
           </div>
         </Slide>
 
@@ -769,9 +725,12 @@ With Expo tools, services, and React Native, you can build, deploy, and quickly 
             <Image src={images.logoWebtripCzarne} />
           </div>
           <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-              zgłębić szczegóły
-            </Text>
+            <BlockQuote>
+              <Quote fit textColor="secondary" style={{fontSize: '60px', borderLeft: '1px solid #ed1941'}}>
+                You don't write native code, you focus on writing your React app in JavaScript. You don't have to worry about iOS or Android specific settings, or even opening up Xcode.
+              </Quote>
+              <Cite style={{fontSize: '55px'}} margin="10px 0 0 30px">Expo.io</Cite>
+            </BlockQuote>
           </div>
         </Slide>
 
@@ -785,9 +744,12 @@ With Expo tools, services, and React Native, you can build, deploy, and quickly 
             <Image src={images.logoWebtripCzarne} />
           </div>
           <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-              z czego się składa
-            </Text>
+            <BlockQuote>
+              <Quote fit textColor="secondary" style={{fontSize: '60px', borderLeft: '1px solid #ed1941'}}>
+                If you've ever had to go through the trouble of upgrading a module or installing something like react-native-maps, you'll appreciate when things just work.
+              </Quote>
+              <Cite style={{fontSize: '55px'}} margin="10px 0 0 30px">Expo.io</Cite>
+            </BlockQuote>
           </div>
         </Slide>
 
@@ -835,9 +797,8 @@ With Expo tools, services, and React Native, you can build, deploy, and quickly 
             <Image src={images.logoWebtripBiale} />
           </div>
           <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-              tu efekty pracy GPS 1
-            </Text>
+            <Image src={screens.case02Done01} style={{marginRight: '100px', display: 'inline'}} />
+            <Image src={screens.case02Done02} style={{display: 'inline'}} />
           </div>
         </Slide>
 
@@ -848,38 +809,19 @@ With Expo tools, services, and React Native, you can build, deploy, and quickly 
           <div style={{position: 'absolute',top: '5%',right: '5%'}}>
             <Image src={images.logoWebtripBiale} />
           </div>
-          <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-              tu efekty pracy GPS 2
-            </Text>
-          </div>
-        </Slide>
-
-        <Slide transition={['fade']} bgColor="secondary">
-          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
-            <Heading size={5} textColor="primary">Case study: GPS</Heading>
-          </div>
-          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
-            <Image src={images.logoWebtripBiale} />
-          </div>
-          <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-              tu efekty pracy GPS 3
-            </Text>
-          </div>
-        </Slide>
-
-        <Slide transition={['fade']} bgColor="secondary">
-          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
-            <Heading size={5} textColor="primary">Case study: GPS</Heading>
-          </div>
-          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
-            <Image src={images.logoWebtripBiale} />
-          </div>
-          <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-              tu info o nowej wersji Expo w ktorej mozna odpalic funkcje GPS w tle
-            </Text>
+          <div style={{marginTop: '65px', color: 'white'}}>
+            Od stycznia 2019 dostępne Expo SDK v32.0.0 - TaskManager:
+            <List>
+              <ListItem style={{paddingBottom: '30px'}}><span style={{fontWeight: 'bold'}}>Komponent Location</span>
+              <br /><br /><div style={{paddingLeft: '65px', fontSize: '35px'}}>Zadanie w tle aktualizujące stan lokalizacji.
+              <br /><br />Zadanie w tle umożliwiające wywołanie triggera geofencingu, jeśli mobilne urządzenie wejdzie lub wyjdzie z określonego obszaru geograficznego w celu np. wygenerowania powiadomienia.
+              </div>
+              </ListItem>
+              <ListItem><span style={{fontWeight: 'bold'}}>Komponent BackgroundFetch</span>
+              <br /><br /><div style={{paddingLeft: '65px', fontSize: '35px'}}>Pobieranie danych z sieci w trybie pracującym w tle poprzez komponent BackgroundFetch.
+              </div>
+              </ListItem>
+            </List>
           </div>
         </Slide>
 
@@ -919,155 +861,56 @@ With Expo tools, services, and React Native, you can build, deploy, and quickly 
           </div>
         </Slide>
 
-        <Slide transition={['fade']} bgColor="secondary">
+        <Slide transition={['fade']} bgColor="primary">
           <div style={{position: 'absolute',top: '5%',left: '5%'}}>
-            <Heading size={5} textColor="primary">Case study: Odtwarzacz muzyki</Heading>
+            <Heading size={5} textColor="secondary">Case study: Odtwarzacz muzyki</Heading>
           </div>
           <div style={{position: 'absolute',top: '5%',right: '5%'}}>
-            <Image src={images.logoWebtripBiale} />
+            <Image src={images.logoWebtripCzarne} />
           </div>
           <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-              tu efekty pracy odtwarzacza muzyki 1
-            </Text>
-          </div>
-        </Slide>
-
-        <Slide transition={['fade']} bgColor="secondary">
-          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
-            <Heading size={5} textColor="primary">Case study: Odtwarzacz muzyki</Heading>
-          </div>
-          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
-            <Image src={images.logoWebtripBiale} />
-          </div>
-          <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-              tu efekty pracy 2
-            </Text>
-          </div>
-        </Slide>
-
-        <Slide transition={['fade']} bgColor="secondary">
-          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
-            <Heading size={5} textColor="primary">Case study: Odtwarzacz muzyki</Heading>
-          </div>
-          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
-            <Image src={images.logoWebtripBiale} />
-          </div>
-          <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-              tu efekty pracy 3
-            </Text>
-          </div>
-        </Slide>
-
-        <Slide transition={['fade']} bgColor="secondary">
-          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
-            <Heading size={5} textColor="primary">Case study: Odtwarzacz muzyki</Heading>
-          </div>
-          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
-            <Image src={images.logoWebtripBiale} />
-          </div>
-          <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-              Wnioski...
-            </Text>
+            <Image src={images.expoZiomek} fit />
           </div>
         </Slide>
 
         <Slide bgColor="primary">
           <div style={{position: 'absolute',top: '5%',left: '5%'}}>
             <Heading size={5} textColor="secondary">
-              Expo: Ograniczenia
+              Expo: Dlaczego nie?
             </Heading>
           </div>
           <div style={{position: 'absolute',top: '5%',right: '5%'}}>
             <Image src={images.logoWebtripCzarne} />
           </div>
           <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-              jakie są ograniczenia Expo?
-            </Text>
+            <BlockQuote>
+              <Quote fit textColor="secondary" style={{fontSize: '50px', borderLeft: '1px solid #ed1941'}}>
+                The intention of this document is to outline some of those cases, so that you don't end up building an app with Expo and getting frustrated when you encounter an obstacle that you can't overcome without switching to the bare workflow.
+              </Quote>
+              <Cite style={{fontSize: '35px'}} margin="10px 0 0 30px">Why not Expo?<br />docs.expo.io/versions/v32.0.0/introduction/why-not-expo/</Cite>
+            </BlockQuote>
           </div>
         </Slide>
 
         <Slide transition={['fade']} bgColor="primary">
           <div style={{position: 'absolute',top: '5%',left: '5%'}}>
             <Heading size={5} textColor="secondary">
-              Expo: Ograniczenia
+              Expo: Dlaczego nie?
             </Heading>
           </div>
           <div style={{position: 'absolute',top: '5%',right: '5%'}}>
             <Image src={images.logoWebtripCzarne} />
           </div>
           <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-              czy jest używany produkcyjnie? Nie – tak mówił programista Espeo
-            </Text>
-          </div>
-        </Slide>
-
-        <Slide transition={['fade']} bgColor="primary">
-          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
-            <Heading size={5} textColor="secondary">
-              Expo: Ograniczenia
-            </Heading>
-          </div>
-          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
-            <Image src={images.logoWebtripCzarne} />
-          </div>
-          <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-              nowości odnośnie Expo z konferencji z Krakowa? Może coś się zmieniło?
-            </Text>
-          </div>
-        </Slide>
-
-        <Slide bgColor="primary">
-          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
-            <Heading size={5} textColor="secondary">
-              Expo: Podsumowanie
-            </Heading>
-          </div>
-          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
-            <Image src={images.logoWebtripCzarne} />
-          </div>
-          <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-              szybko porzucenie Expo z powodu ograniczeń
-            </Text>
-          </div>
-        </Slide>
-
-        <Slide transition={['fade']} bgColor="primary">
-          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
-            <Heading size={5} textColor="secondary">
-              Expo: Podsumowanie
-            </Heading>
-          </div>
-          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
-            <Image src={images.logoWebtripCzarne} />
-          </div>
-          <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-              nieoceniona rola Expo we wdrożeniu w środowisko React Native
-            </Text>
-          </div>
-        </Slide>
-
-        <Slide transition={['fade']} bgColor="primary">
-          <div style={{position: 'absolute',top: '5%',left: '5%'}}>
-            <Heading size={5} textColor="secondary">
-              Expo: Podsumowanie
-            </Heading>
-          </div>
-          <div style={{position: 'absolute',top: '5%',right: '5%'}}>
-            <Image src={images.logoWebtripCzarne} />
-          </div>
-          <div style={{marginTop: '65px'}}>
-            <Text margin="10px 0 0" textColor="tertiary" fit bold>
-                „tracimy sporo czasu na konfigurowanie gradli” - jak mówił Espeo, szybko to doświadczyłem, gdy cały dzień zajmowałem się konfigurowaniem kompilacji javy dla Androida
-            </Text>
+          <ul style={{textAlign: 'left', fontSize: '45px'}}>
+            <li style={{paddingBottom: '12px'}}>Brak obsługi Bluetooth</li>
+            <li style={{paddingBottom: '12px'}}>Brak obsługi WebRTC</li>
+            <li style={{paddingBottom: '12px'}}>Brak możliwości zakupów wewnątrz aplikacji</li>
+            <li style={{paddingBottom: '12px'}}>Brak itegracji z Google Pay, Apple Pay</li>
+            <li style={{paddingBottom: '12px'}}>Brak możliwości odtwarzania dźwięku w tle z wykorzystaniem natywnej kontroli</li>
+            <li style={{paddingBottom: '12px'}}>Brak obsługi powiadomień push w tle</li>
+            <li style={{paddingBottom: '12px'}}>Sporych rozmiarów plik aplikacji (od 20MB iOS, 15MB Android)</li>
+          </ul>
           </div>
         </Slide>
 
